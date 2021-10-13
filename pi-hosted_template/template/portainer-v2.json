@@ -676,7 +676,7 @@
                                 }
                         ],
                         "image": "linuxserver/swag:latest",
-                        "logo": "https://raw.githubusercontent.com/novaspirit/pi-hosted/master/pi-hosted_template/images/letsencrypt.png",
+                        "logo": "https://forums.unraid.net/uploads/monthly_2020_09/1871674142_lsioswag4.png.69c8ab1cfcd41d8feb03acff54878a65.png',
                         "name": "swag",
                         "platform": "linux",
                         "ports": [
