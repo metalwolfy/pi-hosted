@@ -664,10 +664,6 @@
                                         "name": "DNSPLUGIN"
                                         "default": "cloudflare"
                                 },
-                                {      
-                                        "label": "DuckDNS Token",
-                                        "name": "DUCKDNSTOKEN"
-                                },
                                 {       
                                         "default": "1000",
                                         "label": "PUID",
