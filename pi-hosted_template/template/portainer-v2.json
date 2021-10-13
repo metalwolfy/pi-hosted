@@ -656,12 +656,12 @@
                                 },
                                 {       
                                         "label": "Certificate Provider",
-                                        "name": "CERTPROVIDER
+                                        "name": "CERTPROVIDER",
                                         "default": "letsencrypt"
                                 },
                                 {      
                                         "label": "DNS Plugin",
-                                        "name": "DNSPLUGIN"
+                                        "name": "DNSPLUGIN",
                                         "default": "cloudflare"
                                 },
                                 {       
