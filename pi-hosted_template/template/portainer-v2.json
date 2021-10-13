@@ -645,14 +645,14 @@
                                         "set": "-Xms256m -Xmx512m"
                                 },
                                 {
-                                        "label": "Subdomains (comma seperated)",
+                                        "label": "Subdomains (comma seperated or STAR)",
                                         "name": "SUBDOMAINS",
                                         "set": "www,"
                                 },
                                 {
                                         "label": "Only Subdomains (true/false)",
                                         "name": "ONLY_SUBDOMAINS",
-                                        "set": "false"
+                                        "default": "false"
                                 },
                                 {       
                                         "label": "Certificate Provider",
@@ -679,11 +679,6 @@
                                         "name": "VALIDATION",
                                         "default": "http"
                                 },
-                                {
-                                        "label": "DNSPLUGIN",
-                                        "name": "DNSPLUGIN",
-                                        "set": "http"
-                                }
                         ],
                         "image": "linuxserver/swag:latest",
                         "logo": "https://forums.unraid.net/uploads/monthly_2020_09/1871674142_lsioswag4.png.69c8ab1cfcd41d8feb03acff54878a65.png",
