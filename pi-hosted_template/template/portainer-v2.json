@@ -632,7 +632,6 @@
                                 {
                                         "label": "Email",
                                         "name": "EMAIL",
-                                        "set": "-Xms256m -Xmx512m"
                                 },
                                 {       
                                         "default": "Europe/London",
@@ -642,12 +641,11 @@
                                 {
                                         "label": "Your Domain",
                                         "name": "URL",
-                                        "set": "-Xms256m -Xmx512m"
                                 },
                                 {
                                         "label": "Subdomains (comma seperated or STAR)",
                                         "name": "SUBDOMAINS",
-                                        "set": "www,"
+                                        "default": "www,"
                                 },
                                 {
                                         "label": "Only Subdomains (true/false)",
@@ -665,7 +663,7 @@
                                         "default": "cloudflare"
                                 },
                                 {
-                                        "label": "Validation",
+                                        "label": "Validation (http or dns)",
                                         "name": "VALIDATION",
                                         "default": "http"
                                 },
