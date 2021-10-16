@@ -631,7 +631,7 @@
                         "env": [
                                 {
                                         "label": "Email",
-                                        "name": "EMAIL",
+                                        "name": "EMAIL"
                                 },
                                 {       
                                         "default": "Europe/London",
@@ -640,7 +640,7 @@
                                 },
                                 {
                                         "label": "Your Domain",
-                                        "name": "URL",
+                                        "name": "URL"
                                 },
                                 {
                                         "label": "Subdomains (comma seperated or STAR)",
