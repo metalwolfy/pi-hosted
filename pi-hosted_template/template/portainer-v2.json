@@ -643,7 +643,7 @@
                                         "name": "URL"
                                 },
                                 {
-                                        "label": "Subdomains (comma seperated or STAR)",
+                                        "label": "Subdomains (comma seperated or wildcard)",
                                         "name": "SUBDOMAINS",
                                         "default": "www,"
                                 },
