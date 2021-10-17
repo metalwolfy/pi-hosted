@@ -670,7 +670,7 @@
                                 {       
                                         "label": "DUCKDNSTOKEN",
                                         "name": "Duck DNS Token"
-                                }
+                                },
                                 {       
                                         "default": "1000",
                                         "label": "PUID",
