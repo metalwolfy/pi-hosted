@@ -669,7 +669,8 @@
                                 },
                                 {       
                                         "label": "DUCKDNSTOKEN",
-                                        "name": "Duck DNS Token"
+                                        "name": "Duck DNS Token",
+                                        "default": ""
                                 },
                                 {       
                                         "default": "1000",
