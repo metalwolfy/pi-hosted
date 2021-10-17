@@ -668,8 +668,8 @@
                                         "default": "http"
                                 },
                                 {       
-                                        "label": "DUCKDNSTOKEN",
-                                        "name": "Duck DNS Token",
+                                        "label": "Duck DNS Token",
+                                        "name": "DUCKDNSTOKEN",
                                         "default": ""
                                 },
                                 {       
