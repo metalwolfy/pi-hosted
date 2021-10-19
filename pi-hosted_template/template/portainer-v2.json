@@ -4295,7 +4295,7 @@
 					"container": "/app/data"
 				}
 			]
-		}
+		},
                 {
                         "categories": [
                                 "Tools",
@@ -4376,6 +4376,6 @@
                                         "container": "/config"
                                 }
                         ]
-                },
+                }
 	]
 }
