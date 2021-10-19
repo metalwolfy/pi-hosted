@@ -624,88 +624,6 @@
 		},
 
 
-                {
-                        "categories": [
-                                "Tools",
-                                "Web"
-                        ],
-                        "description": "SWAG - Secure Web Application Gateway (formerly known as letsencrypt, no relation to Let's Encrypt™) sets up an Nginx webserver and reverse proxy with php support and a built-in certbot client that automates free SSL server certificate generation and renewal processes (Let's Encrypt and ZeroSSL). It also contains fail2ban for intrusion prevention.",
-
-
-                        "env": [
-                                {
-                                        "label": "Email",
-                                        "name": "EMAIL"
-                                },
-                                {       
-                                        "default": "Europe/London",
-                                        "label": "Timezone",
-                                        "name": "TZ"
-                                },
-                                {
-                                        "label": "Your Domain",
-                                        "name": "URL"
-                                },
-                                {
-                                        "label": "Subdomains (comma seperated or wildcard)",
-                                        "name": "SUBDOMAINS",
-                                        "default": "www,"
-                                },
-                                {
-                                        "label": "Only Subdomains (true/false)",
-                                        "name": "ONLY_SUBDOMAINS",
-                                        "default": "false"
-                                },
-                                {       
-                                        "label": "Certificate Provider",
-                                        "name": "CERTPROVIDER",
-                                        "default": "letsencrypt"
-                                },
-                                {      
-                                        "label": "DNS Plugin",
-                                        "name": "DNSPLUGIN",
-                                        "default": "cloudflare"
-                                },
-                                {
-                                        "label": "Validation (http or dns)",
-                                        "name": "VALIDATION",
-                                        "default": "http"
-                                },
-                                {       
-                                        "label": "Duck DNS Token",
-                                        "name": "DUCKDNSTOKEN",
-                                        "default": ""
-                                },
-                                {       
-                                        "default": "1000",
-                                        "label": "PUID",
-                                        "name": "PUID"
-                                },
-                                {       
-                                        "default": "1000",
-                                        "label": "PGID",
-                                        "name": "PGID"
-                                }
-                        ],
-                        "image": "linuxserver/swag:latest",
-                        "logo": "https://forums.unraid.net/uploads/monthly_2020_09/1871674142_lsioswag4.png.69c8ab1cfcd41d8feb03acff54878a65.png",
-                        "name": "swag",
-                        "platform": "linux",
-                        "ports": [
-                                "80/tcp",
-                                "443/tcp"
-                        ],
-                        "restart_policy": "unless-stopped",
-                        "title": "Swag",
-                        "type": 1,
-                        "volumes": [
-                                {
-                                        "bind": "/portainer/Files/AppData/Config/swag",
-                                        "container": "/config"
-                                }
-                        ]
-                },
-
 		{
 			"categories": [
 				"Other",
@@ -4378,5 +4296,86 @@
 				}
 			]
 		}
+                {
+                        "categories": [
+                                "Tools",
+                                "Web"
+                        ],
+                        "description": "SWAG - Secure Web Application Gateway (formerly known as letsencrypt, no relation to Let's Encrypt™) sets up an Nginx webserver and reverse proxy with php support and a built-in certbot client that automates free SSL server certificate generation and renewal processes (Let's Encrypt and ZeroSSL). It also contains fail2ban for intrusion prevention.",
+
+
+                        "env": [
+                                {
+                                        "label": "Email",
+                                        "name": "EMAIL"
+                                },
+                                {
+                                        "default": "Europe/London",
+                                        "label": "Timezone",
+                                        "name": "TZ"
+                                },
+                                {
+                                        "label": "Your Domain",
+                                        "name": "URL"
+                                },
+                                {
+                                        "label": "Subdomains (comma seperated or wildcard)",
+                                        "name": "SUBDOMAINS",
+                                        "default": "www,"
+                                },
+                                {
+                                        "label": "Only Subdomains (true/false)",
+                                        "name": "ONLY_SUBDOMAINS",
+                                        "default": "false"
+                                },
+                                {      
+                                        "label": "Certificate Provider",
+                                        "name": "CERTPROVIDER",
+                                        "default": "letsencrypt"
+                                },
+                                {     
+                                        "label": "DNS Plugin",
+                                        "name": "DNSPLUGIN",
+                                        "default": "cloudflare"
+                                },
+                                {
+                                        "label": "Validation (http or dns)",
+                                        "name": "VALIDATION",
+                                        "default": "http"
+                                },
+                                {      
+                                        "label": "Duck DNS Token",
+                                        "name": "DUCKDNSTOKEN",
+                                        "default": ""
+                                },
+                                {
+                                        "default": "1000",
+                                        "label": "PUID",
+                                        "name": "PUID"
+                                },
+                                {      
+                                        "default": "1000",
+                                        "label": "PGID",
+                                        "name": "PGID"
+                                }
+                        ],
+                        "image": "linuxserver/swag:latest",
+                        "logo": "https://raw.githubusercontent.com/metalwolfy/pi-hosted/master/pi-hosted_template/images/swag.png",
+                        "name": "swag",
+                        "platform": "linux",
+                        "ports": [
+                                "80/tcp",
+                                "443/tcp"
+                        ],
+                        "restart_policy": "unless-stopped",
+                        "title": "Swag",
+                        "type": 1,
+                        "volumes": [
+                                {
+                                        "bind": "/portainer/Files/AppData/Config/swag",
+                                        "container": "/config"
+                                }
+                        ]
+                },
 	]
 }
