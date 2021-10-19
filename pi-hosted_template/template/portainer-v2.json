@@ -17,6 +17,10 @@
 					"label": "PGID",
 					"name": "PGID"
 				},
+                                {
+                                        "label": "TZ",
+                                        "name": "TZ"
+                                },
 				{
 					"label": "CONTEXT_PATH",
 					"name": "CONTEXT_PATH",
@@ -725,7 +729,7 @@
 			"name": "librespeed",
 			"platform": "linux",
 			"ports": [
-				"83:83/tcp"
+				"83:80/tcp"
 			],
 			"restart_policy": "unless-stopped",
 			"title": "LibreSpeed",
@@ -1262,6 +1266,45 @@
 			},
 			"title": "Nextcloud",
 			"type": 3
+		},
+		{
+			"categories": [
+				"Cloud",
+				"Productivity",
+				"Tools",
+				"Other",
+				"Web"
+			],
+			"description": "Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "100",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"name": "nextcloudpi",
+			"note": "The database user is nextcloud and the database is nextcloud_db. The host of the database will be located at the bottom of the DB conotainer in portainer.",
+			"platform": "linux",
+			"image": "ownyourbits/nextcloudpi",
+			"title": "NextcloudPi",
+			"type": 1,
+			"ports":[
+				"4443:4443/tcp",
+				"8443:443/tcp",
+				"8480:8480/tcp"
+			],
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/ncdata",
+					"container": "/data"
+				}
+			]	
 		},
 		{
 			"categories": [
@@ -4268,6 +4311,46 @@
 				{
 					"bind": "/var/run/docker.sock",
 					"container": "/var/run/docker.sock"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Cloud",
+				"Management",
+				"Productivity"
+			],
+			"description": "Paperless is an application by Daniel Quinn and contributors that indexes your scanned documents and allows you to easily search for documents and store metadata alongside your documents. https://github.com/jonaswinkler/paperless-ng",
+			"image": "linuxserver/paperless-ng",
+			"logo": "https://raw.githubusercontent.com/novaspirit/pi-hosted/master/pi-hosted_template/images/paperless.png",
+			"name": "paperless",
+			"platform": "linux",
+			"ports": [
+				"8005:8000/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Paperless",
+			"type": 1,
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/paperless/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/portainer/Files/AppData/Config/paperless/data",
+					"container": "/data"
 				}
 			]
 		},
