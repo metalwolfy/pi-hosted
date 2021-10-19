@@ -4360,7 +4360,7 @@
                                 }
                         ],
                         "image": "linuxserver/swag:latest",
-                        "logo": "https://raw.githubusercontent.com/metalwolfy/pi-hosted/master/pi-hosted_template/images/swag.png",
+                        "logo": "https://raw.githubusercontent.com/novaspirit/pi-hosted/master/pi-hosted_template/images/swag.png",
                         "name": "swag",
                         "platform": "linux",
                         "ports": [
