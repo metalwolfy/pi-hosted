@@ -4422,8 +4422,49 @@
                                         "container": "/mnt/etc-dnsmasq.d:ro"
                                 }
                         ]
+                },
+                {
+                        "categories": [
+                                "Other",
+                                "Tools"
+                        ],
+                        "description": "To Be Filled in",
+                        "env": [
+                                {
+                                        "label": "Node Type",
+                                        "name": "NODE",
+                                        "set": "receiver"
+                                }
+                        ],
+                        "image": "shirom/pihole-sync:latest",
+                        "logo": "https://raw.githubusercontent.com/novaspirit/pi-hosted/master/pi-hosted_template/images/pihole.png",
+                        "name": "pihole-sync-receiver",
+                        "platform": "linux",
+                        "restart_policy": "unless-stopped",
+                        "title": "PiHole-Sync Receiver",
+                        "type": 1,
+                        "ports": [
+                                "22222:22/tcp"
+                        ],
+                        "volumes": [
+                                {
+                                        "bind": "/portainer/Files/AppData/Config/PiHoleSync-root",
+                                        "container": "/root"
+                                },
+                                {
+                                        "bind": "/portainer/Files/AppData/Config/PiHoleSync-ssh",
+                                        "container": "/etc/ssh"
+                                },
+                                {
+                                        "bind": "/portainer/Files/AppData/Config/PiHole",
+                                        "container": "/mnt/etc-pihole"
+                                },
+                                {
+                                        "bind": "/portainer/Files/AppData/Config/PiHole/DNS",
+                                        "container": "/mnt/etc-dnsmasq.d"
+                                }
+                        ]
                 }
-
 
 	]
 }
