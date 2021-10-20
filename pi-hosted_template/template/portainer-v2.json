@@ -4362,6 +4362,7 @@
                         "image": "linuxserver/swag:latest",
                         "logo": "https://raw.githubusercontent.com/novaspirit/pi-hosted/master/pi-hosted_template/images/swag.png",
                         "name": "swag",
+                        "note": "",
                         "platform": "linux",
                         "ports": [
                                 "80/tcp",
@@ -4376,6 +4377,53 @@
                                         "container": "/config"
                                 }
                         ]
+                },
+                {
+                        "categories": [
+                                "Other",
+                                "Tools"
+                        ],
+                        "description": "To Be Filled in",
+                        "env": [
+                                {       
+                                        "label": "Node Type",
+                                        "name": "NODE",
+                                        "set": "sender"
+                                },
+                                {       
+                                        "default": "",
+                                        "label": "Remote Host",
+                                        "name": "REM_HOST"
+                                },
+                                {       
+                                        "label": "Remote SSH Port",
+                                        "default": "22222",
+                                        "name": "REM_SSH_PORT"
+                                },
+                        ],
+                        "image": "shirom/pihole-sync:latest",
+                        "logo": "https://raw.githubusercontent.com/novaspirit/pi-hosted/master/pi-hosted_template/images/pihole.png",
+                        "name": "pihole-sync-sender",
+                        "platform": "linux",
+                        "restart_policy": "unless-stopped",
+                        "title": "PiHole-Sync Sender",
+                        "type": 1,
+                        "volumes": [
+                                {
+                                        "bind": "/portainer/Files/AppData/Config/PiHoleSync",
+                                        "container": "/root"
+                                },
+                                {
+                                        "bind": "/portainer/Files/AppData/Config/PiHole",
+                                        "container": "/mnt/etc-pihole:ro"
+                                },
+                                {
+                                        "bind": "/portainer/Files/AppData/Config/PiHole/DNS",
+                                        "container": "/mnt/etc-dnsmasq.d:ro"
+                                }
+                        ]
                 }
+
+
 	]
 }
