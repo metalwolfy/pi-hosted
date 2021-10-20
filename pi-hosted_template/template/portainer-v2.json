@@ -4386,11 +4386,6 @@
                         "description": "To Be Filled in",
                         "env": [
                                 {       
-                                        "label": "Node Type",
-                                        "name": "NODE",
-                                        "set": "sender"
-                                },
-                                {       
                                         "default": "",
                                         "label": "Remote Host",
                                         "name": "REM_HOST"
@@ -4399,6 +4394,11 @@
                                         "label": "Remote SSH Port",
                                         "default": "22222",
                                         "name": "REM_SSH_PORT"
+                                },
+                                {       
+                                        "label": "Node Type",
+                                        "name": "NODE",
+                                        "set": "sender"
                                 }
                         ],
                         "image": "shirom/pihole-sync:latest",
